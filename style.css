@@ -1,0 +1,111 @@
+/*Formatações gerais */ 
+body{
+  background-color: rgb(245,245,245);
+
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+/*login/cadastro*/ 
+.card-header{
+  background-color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.create-account a{
+  color: #17a2b8;
+}
+
+.custom-btn {
+  height: 70px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+}
+.custom-btn a{
+  border: 1px solid #17a2b8;
+  color: #17a2b8;
+  padding: 10px;
+  background-color: transparent;
+  margin: 0px 10px;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0.25em;
+
+      
+}
+
+.custom-btn a:hover{
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 10px;
+  background-color: #17a2b8;
+  margin: 0px 10px;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0.25em;
+
+      
+}
+
+.custom-btn .selected {
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 10px;
+  background-color: #17a2b8;
+  margin: 0px 10px;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0.25em;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+/*container de login/cadastro*/ 
+.card-login {
+  padding: 30% 0 0 0;
+  width: 300px;
+
+}
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+/*container de login/cadastro*/ 
+.card-login {
+  padding: 30% 0 0 0;
+  width: 400px;
+
+}
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+  
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  
+  
+  
+}
