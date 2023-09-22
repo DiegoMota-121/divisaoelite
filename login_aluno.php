@@ -1,3 +1,23 @@
+<?php
+
+if(isset($_GET['cadastro']) && $_GET['cadastro'] == 'success' ) { ?>
+
+<script>
+  alert('Cadastrado com Sucesso!');
+</script>
+
+<?php } ?>
+
+<?php
+
+if(isset($_GET['cadastro']) && $_GET['cadastro'] == 'error4' ) { ?>
+
+<script>
+  alert('Falha ao realizar o cadastro:');
+</script>
+
+<?php } ?>
+
 <html>
   <head>
     <meta charset="utf-8" />
@@ -18,14 +38,33 @@
               Login
             </div>
             <div class="card-body">
-              <form action="" method="post">
+              <form action="valida_login_aluno.php" method="post">
                 <div class="form-group">
                   <label>Email</label>
-                  <input name="email" type="email" class="form-control" placeholder="E-mail">
+                  <input name="email" type="email" class="form-control" id="form-email" placeholder="E-mail">
+                  <?php
+
+                  if(isset($_GET['login']) && $_GET['login'] == 'error1' ) { ?>
+                  <script>
+                      document.getElementById('form-email').className = 'form-control-error'
+                  </script>
+
+                  <?php } ?>           
                 </div>
+
+
                 <div class="form-group">
                   <label>Senha</label>
-                  <input name="senha" type="password" class="form-control" placeholder="Senha">
+                  <input name="senha" type="password" class="form-control" id="form-senha" placeholder="Senha">
+                  <?php
+
+                  if(isset($_GET['login']) && $_GET['login'] == 'error1' ) { ?>
+
+                  <script>
+                      document.getElementById('form-senha').className = 'form-control-error'
+                  </script>
+
+                  <?php } ?>
                 </div>
 
                 <div class="custom-btn">
@@ -39,9 +78,27 @@
                 </div>
 
                 <div class="create-account">
-                  <p>Não possui uma conta? <a href="cadastro.php">Registrar-se</a></p>
+                  <p>Não possui uma conta? <a href="cadastro_aluno.php">Registrar-se</a></p>
                 </div>
 
+                <?php
+
+                if(isset($_GET['login']) && $_GET['login'] == 'error1' ) { ?>
+                  <div class="exception">
+                      <p>Senha ou email incorreto!</p>
+                  </div>
+
+                <?php } ?>
+
+                <?php
+
+                if(isset($_GET['login']) && $_GET['login'] == 'error2' ) { ?>
+                  <div class="exception">
+                      <p>Faça login para iniciar!</p>
+                  </div>
+
+                <?php } ?>
+           
                 <button class="btn btn-lg btn-info btn-block" type="submit">Entrar</button>
               </form>
             </div>

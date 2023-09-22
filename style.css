@@ -10,6 +10,30 @@ body{
   justify-content: center;
 }
 
+/*tratamento de erros*/
+.exception p{
+  color: red;
+}
+
+.form-control-error::placeholder {
+  color:  #7a7e80;
+}
+
+.form-control-error{
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fcb4c4;
+  background-clip: padding-box;
+  border: 1px solid red;
+  border-radius: 0.25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  
+}
+
 /*login/cadastro*/ 
 .card-header{
   background-color: #fff;
